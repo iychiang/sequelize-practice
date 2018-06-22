@@ -23,7 +23,8 @@ router.get('/featured', (req, res) => {
 
 router.post('/', (req, res) => {
   req.body.authorId = req.query.authorId;
-  //what is this
+  //look in blogs.spec.js to get "req.query.authorId"-- it's an
+  //arbitrary value not associated with actual authorId
   Blog
     .create(req.body)
     .then(newBlog => {
